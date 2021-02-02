@@ -1,0 +1,142 @@
+.sidebar {
+    width: 320px;
+    background-color: $colorWhite;
+    padding: 20px 0 0;
+    height: 715px;
+    @media screen and (max-width: 1024px){
+        width: 100%;
+        height: 30vh;  
+        margin-bottom: 50px;
+    }
+}
+
+.departmens-form {
+    padding: 0 0 10px;
+    &__select {
+        background-color: $colorWhite;
+        border: 0;
+        border-radius: 4px;
+            background-color: $colorBG;
+            padding: 10px 15px 5px;
+        @include placeholder() {
+            font-size: 14px;
+            color: rgba(0, 0, 0, .3);
+        }
+    }
+    &__label {
+        display: inline-block;
+        &_select {
+            border-radius: 4px;
+            background-color: $colorBG;
+           margin-bottom: 15px;
+           margin: 0 20px;
+        }
+    }
+    &__search {
+        border: 0;
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+    &__submit {
+        background-color: $colorWhite;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 0 20px;
+        margin-top: 15px;
+    }
+}
+.departments-list {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+.departments-item {
+    border-top: 1px solid $colorBorder;
+    padding: 20px 20px 15px;
+    @media screen and (max-width: 1024px){
+       padding: 10px 10px 5px; 
+    }
+    transition: all .3s ease-in-out;
+    background-color: $colorWhite;
+    &:hover {
+        background-color: $colorSelection;
+    }
+    &__title  {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        @media screen and (max-width: 1024px){
+        font-size: 15px;
+        }
+    }
+    &__address {
+        margin-bottom: 5px;
+        p {
+            font-size: 14px;
+        }
+    }
+    &__pickup {
+        color: $colorGreen;
+    }
+    &__phone {
+        position: relative;
+        padding-left: 20px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/dest/i-tel.svg);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+    
+    &__shedule {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 20px;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/dest/i-clock.svg); 
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+.suggestions-container {
+    max-height: 400px;
+    overflow-y: scroll;
+    position: relative;
+    background-color: rgba(0, 0, 0, .3);
+}
+.suggestions-list {
+    position: absolute;
+    flex-direction: column;
+    
+    z-index: 9;
+    left: 0;
+    top: 47px;
+    display: none;
+    
+    &.is-active {
+        display: flex;
+    }
+}

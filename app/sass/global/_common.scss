@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    &::after, &::before {
+        box-sizing: border-box;
+    }
+}
+body {
+    font-family: $fontPrimary;
+}
+p {
+    line-height: 1.2;
+    color: $colorBlack;
+    @media screen and (max-width: 1024px){
+        font-size: 14px;
+    }
+}
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 50px;
+    @media screen and (max-width: 1024px){
+        padding: 20px;
+    }
+    
+}
+.container {
+    display: flex;
+    border: 1px solid $colorBorder;
+    border-radius: 4px;
+    @media screen and (max-width: 1024px){
+        flex-wrap: wrap;
+    }
+}
+.map-container {
+    width: calc(100% - 320px);
+    @media screen and (max-width: 1024px){
+        height: 60vh;
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+.icon {
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-search {
+    background-image: url(../img/dest/search-i.svg);  
+    width: 17px;
+    height: 17px;
+}
+.overflow-y {
+    max-height: 600px;
+    overflow-y: scroll;
+    padding-right: 5px;
+    margin-right: 5px;
+    @media screen and (max-width: 1024px){
+        
+        max-height: 20vh;  
+    }
+}
+
+.overflow-y::-webkit-scrollbar {
+    width: 4px;
+}
+
+.overflow-y::-webkit-scrollbar-track {
+    background-color: #939397;
+    border-radius: 8px;
+}
+
+.overflow-y::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #252531;
+}
+#map {width:100%; height:100%;}
