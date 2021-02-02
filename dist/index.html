@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <aside class="sidebar">
+                <form class="departmens-form">
+                    <label for="departmens-select" class="departmens-form__label departmens-form__label_select">
+                        <select name="departmens" id="departmens-select" class="departmens-form__select">
+                            <template id="optionTemplate">
+                                <option value="Киевская">
+                                    <p>Киевская область</p>
+                                </option>
+                            </template>
+                        </select>
+                    </label>
+                    <div class="departmens-form__inner">
+                        <button type="button" class="departmens-form__submit"><i class="icon icon-search"></i></button>
+                        <label for="departmens-search" class="departmens-form__label departmens-form__label_search">
+                            <input type="text" name="departmens-search" id="departmens-search" placeholder="поиск"
+                                class="departmens-form__search">
+                        </label>
+                        <div class="suggestions-container">
+                            <div class="suggestions-list" id="suggestions-list">
+                                <template id="suggestion-template">
+                                    <div class="departments-item">
+                                        <p class="departments-item__title"></p>
+                                        <p class="departments-item__region"></p>
+                                        <p class="departments-item__city"></p>
+                                        <div class="departments-item__address">
+                                            <p></p>
+                                        </div>
+                                        <p class="departments-item__pickup"></p>
+                                        <p class="departments-item__phone" </p> <div class="departments-item__shedule">
+                                            <p></p>
+                                    </div>
+                            </div>
+                            </template>
+                        </div>
+                    </div>
+
+        </div>
+        </form>
+        <div class="departments-list overflow-y" id="departmentsList">
+            <template id="departmentsItem">
+                <div class="departments-item">
+                    <p class="departments-item__title"></p>
+                    <p class="departments-item__region"></p>
+                    <p class="departments-item__city"></p>
+                    <div class="departments-item__address">
+                        <p></p>
+                    </div>
+                    <p class="departments-item__pickup"></p>
+                    <p class="departments-item__phone" </p> <div class="departments-item__shedule">
+                        <p></p>
+                </div>
+        </div>
+        </template>
+    </div>
+    </aside>
+    <div class="map-container">
+        <div id="map">
+
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+    </script>
+
+</body>
+
+</html>
